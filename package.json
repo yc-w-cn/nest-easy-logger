@@ -10,6 +10,7 @@
   },
   "scripts": {
     "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
     "test": "mocha src/**/*.spec.ts",
     "test:dev": "mocha -w --watch-files \"src\" src/**/*.spec.ts"
   },
@@ -31,6 +32,7 @@
     "@types/sinon": "^10.0.20",
     "chai": "^4.3.10",
     "mocha": "^10.2.0",
+    "rimraf": "^5.0.5",
     "sinon": "^17.0.0",
     "ts-node": "^10.9.1"
   }
