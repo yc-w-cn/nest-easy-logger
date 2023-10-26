@@ -1,0 +1,37 @@
+{
+  "name": "nest-easy-logger",
+  "version": "1.0.0",
+  "description": "Nest Easy Logger is built for print formatted things.",
+  "author": "contact@wangyuchen.cn",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yc-w-cn/nest-easy-logger.git"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "test": "mocha src/**/*.spec.ts",
+    "test:dev": "mocha -w --watch-files \"src\" src/**/*.spec.ts"
+  },
+  "keywords": [
+    "nestjs",
+    "logger"
+  ],
+  "bugs": {
+    "url": "https://github.com/yc-w-cn/nest-easy-logger/issues"
+  },
+  "homepage": "https://github.com/yc-w-cn/nest-easy-logger/#readme",
+  "license": "MIT",
+  "dependencies": {
+    "@nestjs/common": "^10.2.7"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.9",
+    "@types/mocha": "^10.0.3",
+    "@types/sinon": "^10.0.20",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "sinon": "^17.0.0",
+    "ts-node": "^10.9.1"
+  }
+}
