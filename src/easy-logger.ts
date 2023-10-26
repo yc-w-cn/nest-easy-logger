@@ -10,26 +10,30 @@ export class EasyLogger extends Logger {
   }
 
   print(key: string, value?: any) {
-    this.log(this._contentFormatter.print(key, value));
+    super.log(this._contentFormatter.print(key, value));
   }
 
   log(key: string, value?: any) {
-    this.log(this._contentFormatter.print(key, value));
+    super.log(this._contentFormatter.print(key, value));
   }
 
   debug(key: string, value?: any) {
-    this.debug(this._contentFormatter.print(key, value));
+    super.debug(this._contentFormatter.print(key, value));
   }
 
   error(key: string, value?: any) {
-    this.error(this._contentFormatter.print(key, value));
+    super.error(this._contentFormatter.print(key, value));
   }
 
   warn(key: string, value?: any) {
-    this.warn(this._contentFormatter.print(key, value));
+    super.warn(this._contentFormatter.print(key, value));
   }
 
   verbose(key: string, value?: any) {
-    this.verbose(this._contentFormatter.print(key, value));
+    super.verbose(this._contentFormatter.print(key, value));
+  }
+
+  fatal(key: string, value?: any) {
+    super.fatal(this._contentFormatter.print(key, value));
   }
 }
