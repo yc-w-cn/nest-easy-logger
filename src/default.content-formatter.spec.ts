@@ -37,9 +37,9 @@ describe("DefaultContentFormatter", () => {
   });
 
   describe("Dynamic options", () => {
-    it("should relaceEmptyValue with default option", () => {
+    it("should replaceEmptyValue with default option", () => {
       const defaultContentFormatter = new DefaultContentFormatter({
-        relaceEmptyValue: true,
+        replaceEmptyValue: true,
       });
       expect(
         defaultContentFormatter
@@ -51,16 +51,16 @@ describe("DefaultContentFormatter", () => {
       );
     });
 
-    it("should relaceEmptyValue with custom option", () => {
-      const relaceEmptyValue = "EMPTY VALUE";
+    it("should replaceEmptyValue with custom option", () => {
+      const replaceEmptyValue = "EMPTY VALUE";
       const defaultContentFormatter = new DefaultContentFormatter({
-        relaceEmptyValue,
+        replaceEmptyValue,
       });
       expect(defaultContentFormatter.print("", randomValue)).to.includes(
-        relaceEmptyValue
+        replaceEmptyValue
       );
       expect(defaultContentFormatter.print(randomKey, "")).to.includes(
-        relaceEmptyValue
+        replaceEmptyValue
       );
     });
   });

@@ -1,14 +1,14 @@
 import { IContentFormatter } from "./content-formatter.interface";
 
 export type DefaultContentFormatterOptions = {
-  relaceEmptyValue: boolean | string;
+  replaceEmptyValue: boolean | string;
 };
 
 /**
  * 默认配置项
  */
 export const defaultOptions: DefaultContentFormatterOptions = {
-  relaceEmptyValue: false,
+  replaceEmptyValue: false,
 };
 
 /**
@@ -31,8 +31,8 @@ export class DefaultContentFormatter implements IContentFormatter {
    * - 如果 (key, null) 只存在 key，则只打印 key
    */
   public print(key: string, value: any = ""): string {
-    const innerKey = this.relaceEmptyValue(key)
-    const innerValue = this.relaceEmptyValue(value)
+    const innerKey = this.replaceEmptyValue(key)
+    const innerValue = this.replaceEmptyValue(value)
     if (!innerKey) {
       throw new Error("error: missing key");
     }
@@ -47,11 +47,11 @@ export class DefaultContentFormatter implements IContentFormatter {
     throw new Error("error");
   }
 
-  private relaceEmptyValue(value: string) {
+  private replaceEmptyValue(value: string) {
     let emptyValue = defaultEmptyValue
-    if (this._options.relaceEmptyValue === false) return value;
-    if(typeof this._options.relaceEmptyValue === 'string'){
-      emptyValue = this._options.relaceEmptyValue
+    if (this._options.replaceEmptyValue === false) return value;
+    if(typeof this._options.replaceEmptyValue === 'string'){
+      emptyValue = this._options.replaceEmptyValue
     }
     if(!value){
       return emptyValue
