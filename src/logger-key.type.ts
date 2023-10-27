@@ -1,0 +1,1 @@
+export type LoggerKey = string | string[]
