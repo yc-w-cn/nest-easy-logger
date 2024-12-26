@@ -1,6 +1,6 @@
 {
   "name": "@yc-w-cn/nest-easy-logger",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Nest Easy Logger is built for print formatted things.",
   "author": "contact@wangyuchen.cn",
   "main": "dist/index.js",
@@ -34,7 +34,8 @@
     "mocha": "^10.2.0",
     "rimraf": "^5.0.5",
     "sinon": "^17.0.0",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.7.2"
   },
   "packageManager": "pnpm@9.15.1"
 }

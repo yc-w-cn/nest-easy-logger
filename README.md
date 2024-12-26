@@ -15,3 +15,11 @@ import { EasyLogger } from "@yc-w-cn/nest-easy-logger";
 const logger = new EasyLogger(name);
 logger.log('YOUR_KEY', 'YOUR_VALUE') // Output: YOUR_KEY -> YOUR_VALUE
 ```
+
+## Publishing
+
+Note that before publishing, you need to build.
+
+```
+pnpm build
+```

@@ -35,7 +35,10 @@ importers:
         version: 17.0.0
       ts-node:
         specifier: ^10.9.1
-        version: 10.9.1(@types/node@20.8.9)(typescript@5.2.2)
+        version: 10.9.1(@types/node@20.8.9)(typescript@5.7.2)
+      typescript:
+        specifier: ^5.7.2
+        version: 5.7.2
 
 packages:
 
@@ -568,8 +571,8 @@ packages:
     resolution: {integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==}
     engines: {node: '>=4'}
 
-  typescript@5.2.2:
-    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -813,6 +816,7 @@ snapshots:
   debug@4.3.4(supports-color@8.1.1):
     dependencies:
       ms: 2.1.2
+    optionalDependencies:
       supports-color: 8.1.1
 
   decamelize@4.0.0: {}
@@ -1111,7 +1115,7 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  ts-node@10.9.1(@types/node@20.8.9)(typescript@5.2.2):
+  ts-node@10.9.1(@types/node@20.8.9)(typescript@5.7.2):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
@@ -1125,7 +1129,7 @@ snapshots:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.2.2
+      typescript: 5.7.2
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
@@ -1133,7 +1137,7 @@ snapshots:
 
   type-detect@4.0.8: {}
 
-  typescript@5.2.2: {}
+  typescript@5.7.2: {}
 
   uid@2.0.2:
     dependencies:
