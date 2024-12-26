@@ -1,4 +1,5 @@
 import { IContentFormatter } from "./content-formatter.interface";
+import { bigIntReplacer } from "./utils";
 
 export type DefaultContentFormatterOptions = {
   replaceEmptyValue: boolean | string;
@@ -42,7 +43,7 @@ export class DefaultContentFormatter implements IContentFormatter {
     if (typeof innerValue === "string") {
       return `${innerKey} -> ${innerValue}`;
     } else if (innerValue) {
-      return `${innerKey} -> ${JSON.stringify(innerValue)}`;
+      return `${innerKey} -> ${JSON.stringify(innerValue, bigIntReplacer)}`;
     }
     throw new Error("error");
   }
